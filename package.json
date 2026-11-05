@@ -1,0 +1,14 @@
+{
+  "name": "static-variants-prototype",
+  "private": true,
+  "packageManager": "pnpm@11.24.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "start": "pnpm -r --parallel start",
+    "prod": "pnpm build && pnpm start",
+
+    "precompute-pattern:dev": "pnpm --filter @static-variants/precompute-pattern dev",
+    "precompute-pattern:prod": "pnpm --filter @static-variants/precompute-pattern build && pnpm --filter @static-variants/precompute-pattern start"
+  }
+}
